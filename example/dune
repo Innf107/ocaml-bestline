@@ -1,0 +1,4 @@
+(executable
+ (public_name bestline_example)
+ (name main)
+ (libraries bestline))

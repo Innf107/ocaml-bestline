@@ -1,0 +1,11 @@
+(library
+ (name bestline)
+ (libraries
+  unix)
+
+ (foreign_stubs
+  (language c)
+  (names
+   bestline
+   bestline_stub)
+ ))
