@@ -11,6 +11,7 @@ bug-reports: "https://github.com/Innf107/ocaml-bestline/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.1"}
+  "unix"
   "odoc" {with-doc}
 ]
 build: [
