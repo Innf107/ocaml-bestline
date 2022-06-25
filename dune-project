@@ -19,7 +19,7 @@
  (name bestline)
  (synopsis "OCaml bindings for the bestline C library")
  (description "OCaml bindings for the bestline C library")
- (depends ocaml dune unix)
+ (depends ocaml dune)
  )
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project
