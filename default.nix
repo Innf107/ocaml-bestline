@@ -1,7 +1,7 @@
 { lib, nix-gitignore, buildDunePackage }:
 
 buildDunePackage rec {
-  pname = "ocaml_bestline";
+  pname = "bestline";
   version = "0.1.0";
   duneVersion = "3";
 
