@@ -1358,6 +1358,9 @@ long bestlineReadCharacter(int fd, char *p, unsigned long n) {
             }
             if (n) {
                 rc = read(fd,&c,1);
+                if (c == 3) {
+                    bestlineOnInt(SIGINT);
+                }
             } else {
                 rc = read(fd,0,0);
             }
