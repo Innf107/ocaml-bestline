@@ -1,11 +1,26 @@
 #include "bestline.h"
 
+#include "caml/memory.h"
 #include <caml/alloc.h>
 #include <caml/mlvalues.h>
 #include <caml/threads.h>
 
 #include <string.h>
 #include <errno.h>
+
+
+// Not all versions of the OCaml runtime define Val_none and caml_alloc_some.
+// These were introduced in the same version so we can safely group them together.
+#ifndef Val_none
+#define Val_none Int_val(0)
+CAMLexport value caml_alloc_some(value v)
+{
+    CAMLparam1(v);
+    value some = caml_alloc_small(1, 0);
+    Store_field(some, 0, v);
+    CAMLreturn(some);
+}
+#endif
 
 CAMLprim value bestline_stub(value prompt){
     // We have to copy the string, since we cannot access
