@@ -11,7 +11,7 @@
 
 (maintainers "Finn Schneider")
 
-(license MIT)
+(license BSD-2-Clause)
 
 (documentation https://github.com/Innf107/ocaml-bestline)
 
